@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TwinMind 2.0 — Accelerate the mind's evolution</title>
+  <meta name="description" content="Your personal AI runs the backend of your life — so your mind can do the one thing that grows it: think, focus, and be here." />
+
+  <!-- Type: Fraunces (serif display) · Instrument Sans (body) · IBM Plex Mono (eyebrows/labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SUNRISE ENGINE (fixed background layers, driven by scroll in main.js)
+       .sky      — full-viewport gradient that warms from pre-dawn to dawn
+       #stars    — canvas starfield, fades out as the sky warms
+       .sun      — the rising sun disc + glow
+       .horizon  — soft ember band at the bottom edge
+       ════════════════════════════════════════════════════════════════════ -->
+  <div class="sky" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="sun" aria-hidden="true"><div class="sun-core"></div></div>
+  <div class="horizon" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+  <header class="nav" id="nav">
+    <a class="nav-wordmark" href="#hero" aria-label="TwinMind — back to top">TWINMIND</a>
+    <a class="btn btn-nav" href="#closer">Evolve faster</a>
+  </header>
+
+  <main id="main">
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 1 — HERO  (full-screen, pre-dawn)
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat hero" id="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow" data-reveal>TwinMind 2.0</p>
+        <h1 class="display" >
+          <span class="line" data-reveal>Accelerate the</span>
+          <span class="line" data-reveal>mind's <em>evolution.</em></span>
+        </h1>
+        <p class="hero-sub" data-reveal>
+          Your personal AI runs the backend of your life — so your mind can do
+          the one thing that grows it: think, focus, and be here.
+        </p>
+        <div class="hero-cta" data-reveal>
+          <a class="btn btn-primary" href="#closer">Evolve faster</a>
+        </div>
+        <p class="trust-strip" data-reveal>Trusted by 400,000+ minds</p>
+      </div>
+      <div class="scroll-hint" aria-hidden="true" data-reveal>
+        <span class="scroll-hint-label">The sun rises as you scroll</span>
+        <span class="scroll-hint-line"></span>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 2 — MANIFESTO  (short, felt, text-forward)
+         Lines arrive one at a time.
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat manifesto" id="manifesto">
+      <div class="container container-narrow">
+        <p class="manifesto-line serif" data-reveal>The human mind is the strongest machine there is. Four billion years of evolution made it so.</p>
+        <p class="manifesto-line serif" data-reveal>But evolution moves in millennia — and the world now moves in months.</p>
+        <p class="manifesto-line serif" data-reveal>We can't wait for biology to grow our minds. So why not use AI to do it now?</p>
+        <p class="manifesto-line serif" data-reveal>That's TwinMind. It listens as you live, remembers everything, and finishes the busywork before you even ask — so your mind never stops to manage, and gets to do what only it can.</p>
+        <p class="manifesto-line serif manifesto-vow" data-reveal>We're not waiting for the next leap. We're accelerating it — <em>for every brain alive.</em></p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 3 — WHAT A GROWING MIND GETS TO DO  (emotional core)
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat" id="growing">
+      <div class="container container-narrow">
+        <h2 class="h2" data-reveal>A mind grows <em>by using it.</em></h2>
+        <p class="body-lg" data-reveal>
+          The hours you get back don't vanish into more work. They go where a
+          mind actually grows — thinking without interruption until an idea
+          turns sharp. Focusing so completely that the focus itself gets
+          stronger. Being all the way present with the people who matter.
+          Returning to the life you're actually living.
+        </p>
+        <p class="kicker" data-reveal>TwinMind runs the backend. You do the growing.</p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 4 — WHY A TWIN, NOT A TOOL  (differentiation)
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat" id="twin-not-tool">
+      <div class="container container-narrow">
+        <h2 class="h2" data-reveal>Every other AI <em>is a stranger.</em></h2>
+        <p class="body-lg" data-reveal>
+          ChatGPT, Gemini, Copilot — brilliant, and meeting you for the first
+          time in every conversation. Intelligence is everywhere now, and it's
+          the same for everyone. It knows everything except you. A Twin is the
+          opposite. It's made of your life — your meetings, your ideas, the
+          promise you made on a walk. It knows what a stranger never could,
+          works for no one but you, and belongs to no one but you.
+        </p>
+        <figure class="testimonial" data-reveal>
+          <!-- PLACEHOLDER SLOT: testimonial photo — swap in Fable -->
+          <div class="avatar placeholder-avatar" data-placeholder="PHOTO · Gautam">G</div>
+          <blockquote class="serif">"Much faster than standard LLMs, which have no context about my life or meetings."</blockquote>
+          <figcaption class="mono">— Gautam, CEO, Monsoon Capital</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 5 — IT LISTENS AS YOU LIVE  (feature chapter → PRESENCE)
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat feature" id="listens">
+      <div class="container feature-grid">
+        <div class="feature-copy">
+          <p class="eyebrow" data-reveal>Chapter one · Presence</p>
+          <h2 class="h2" data-reveal>It listens <em>as you live.</em></h2>
+          <p class="body-lg" data-reveal>
+            No record button. No bot in your meeting. No link to click. Your
+            Twin is simply awake in the margins of your day — the hallway
+            idea, the school-run promise, the sentence you'd have lost by
+            lunch — so you stay in the moment instead of scrambling to hold
+            on to it.
+          </p>
+          <p class="growth-line" data-reveal>Presence is a muscle. It strengthens every time you're fully here. Now you always can be.</p>
+          <p class="proof-line" data-reveal>Meetings, lectures, calls — on your phone, your Mac, your browser, even WhatsApp. Bot-free. On-device. 14+ hours a day without draining your battery.</p>
+        </div>
+        <div class="feature-visual" data-reveal>
+          <!-- PLACEHOLDER SLOT: phone screenshot — live capture screen — swap in Fable -->
+          <div class="device device-phone" data-placeholder="SCREENSHOT · live capture screen (phone)">
+            <div class="device-screen">
+              <div class="ui-pill ui-live"><span class="ui-dot"></span>Listening quietly</div>
+              <div class="ui-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="ui-line w80"></div>
+              <div class="ui-line w95"></div>
+              <div class="ui-line w60"></div>
+              <div class="ui-line w90"></div>
+              <div class="ui-line w45"></div>
+            </div>
+            <span class="placeholder-tag mono">Placeholder · swap in Fable</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 6 — IT REMEMBERS EVERYTHING  (feature chapter → DEPTH)
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat feature" id="remembers">
+      <div class="container feature-grid feature-grid-flip">
+        <div class="feature-copy">
+          <p class="eyebrow" data-reveal>Chapter two · Depth</p>
+          <h2 class="h2" data-reveal>It remembers everything, <em>so you don't have to.</em></h2>
+          <p class="body-lg" data-reveal>
+            Holding every detail was the one job your mind was never built
+            for. Hand it to your Twin. Then ask anything, from any moment
+            you've ever lived — <em class="serif-em">what did she need? what did I promise?
+            what did I decide, and why?</em> — and the answer comes back before
+            you finish the question.
+          </p>
+          <p class="growth-line" data-reveal>A mind that stops storing starts thinking. That's where sharpness comes from.</p>
+          <p class="proof-line" data-reveal>Search across every conversation, in 140+ languages, with the world's highest transcription accuracy. Every top AI model, inside. Works offline.</p>
+        </div>
+        <div class="feature-visual" data-reveal>
+          <!-- PLACEHOLDER SLOT: Mac screenshot — ask-your-memory search — swap in Fable -->
+          <div class="device device-mac" data-placeholder="SCREENSHOT · memory search (Mac)">
+            <div class="device-toolbar"><i></i><i></i><i></i></div>
+            <div class="device-screen">
+              <div class="ui-search mono">what did I promise Mira on Tuesday?</div>
+              <div class="ui-answer">
+                <div class="ui-line w90"></div>
+                <div class="ui-line w75"></div>
+                <div class="ui-line w85"></div>
+              </div>
+              <div class="ui-chip mono">from · Walk with Mira — Tue 8:04 AM</div>
+            </div>
+            <span class="placeholder-tag mono">Placeholder · swap in Fable</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 7 — IT ACTS BEFORE YOU ASK  (peak feature → FOCUS)
+         Boldest treatment: full-width, centered, biggest type.
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat feature-peak" id="acts">
+      <div class="container">
+        <p class="eyebrow eyebrow-center" data-reveal>Chapter three · Focus</p>
+        <h2 class="h2 h2-peak" data-reveal>It acts <em>before you ask.</em></h2>
+        <p class="body-lg body-center" data-reveal>
+          This is the one no other AI can say. They all wait for the prompt.
+          Yours doesn't — because it was already there. The recap, the
+          priorities, the follow-up email: already drafted in your voice,
+          from your life, waiting by the time you'd think to ask.
+        </p>
+
+        <div class="peak-visual" data-reveal>
+          <!-- PLACEHOLDER SLOT: browser screenshot — email drafted before you ask — swap in Fable -->
+          <div class="device device-browser" data-placeholder="SCREENSHOT · drafted email, ready and waiting (Chrome)">
+            <div class="device-toolbar"><i></i><i></i><i></i><span class="ui-url mono">Drafted while you were still in the room</span></div>
+            <div class="device-screen">
+              <div class="ui-mailrow"><span class="ui-tag mono">Ready</span><div class="ui-line w70"></div></div>
+              <div class="ui-mailrow"><span class="ui-tag mono">Ready</span><div class="ui-line w55"></div></div>
+              <div class="ui-mailrow ui-mailrow-open">
+                <div class="ui-line w40 strong"></div>
+                <div class="ui-line w95"></div>
+                <div class="ui-line w85"></div>
+                <div class="ui-line w60"></div>
+                <div class="ui-send mono">Waiting for one tap — yours</div>
+              </div>
+            </div>
+            <span class="placeholder-tag mono">Placeholder · swap in Fable</span>
+          </div>
+        </div>
+
+        <p class="growth-line growth-center" data-reveal>Nothing to stop for means your focus runs unbroken. And unbroken focus is how thinking deepens.</p>
+
+        <figure class="testimonial testimonial-center" data-reveal>
+          <!-- PLACEHOLDER SLOT: testimonial photo — swap in Fable -->
+          <div class="avatar placeholder-avatar" data-placeholder="PHOTO · Ananth">A</div>
+          <blockquote class="serif">"During a meeting, TwinMind gave me answers before I asked."</blockquote>
+          <figcaption class="mono">— Ananth, SWE at Google</figcaption>
+        </figure>
+
+        <p class="proof-line proof-center" data-reveal>Auto-drafted summaries, action items, and priorities. Your inbox, drafted in your voice before breakfast. (Email Assistant on Max.)</p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 8 — IT KEEPS WHAT MATTERS MOST  (soul beat → CONNECTION)
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat soul" id="keeps">
+      <div class="container container-narrow">
+        <p class="eyebrow" data-reveal>Chapter four · Connection</p>
+        <h2 class="h2" data-reveal>It keeps <em>what matters most.</em></h2>
+        <p class="body-lg" data-reveal>
+          Not just meetings. The things you'd never want to lose — your kid's
+          first stories, your parent's advice, the moment you'll want back in
+          ten years. The life that usually slips away, kept safe in the only
+          place it should be: yours.
+        </p>
+        <p class="growth-line" data-reveal>You get the memories back. And the time to be with the people in them.</p>
+
+        <!-- Quiet visual: three small "kept moment" cards, no device chrome -->
+        <div class="moments" data-reveal aria-hidden="true">
+          <div class="moment"><span class="mono moment-when">Sat · 9:12 AM</span><span class="moment-what serif">Her first version of the dragon story</span></div>
+          <div class="moment"><span class="mono moment-when">Sun · 6:47 PM</span><span class="moment-what serif">Dad, on how he knew it was time</span></div>
+          <div class="moment"><span class="mono moment-when">Today · 7:30 AM</span><span class="moment-what serif">The promise on the school run</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 9 — A TWIN FOR EVERY MIND  (equality vow)
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat" id="every-mind">
+      <div class="container container-narrow">
+        <h2 class="h2" data-reveal>Evolution never <em>picked favorites.</em></h2>
+        <p class="body-lg" data-reveal>
+          Your Twin speaks your language — all 140+ of them — so this leap
+          belongs to a student in Jaipur and a founder in San Francisco
+          alike. Not the privileged few. Every mind, every corner of the
+          earth. A leap only some can take isn't evolution. It's advantage.
+          We're building the other thing.
+        </p>
+        <p class="proof-line" data-reveal>Free forever. Works offline, anywhere, in your language.</p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 10 — TRUST  (loyalty first, compliance second)
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat trust" id="trust">
+      <div class="container container-narrow">
+        <h2 class="h2" data-reveal>Your Twin works for you. <em>Only you.</em></h2>
+        <p class="body-lg" data-reveal>
+          It listens for no one else, answers to no one else, belongs to no
+          one else. Your life is never stored as sound, never sold, never
+          used to train anyone's machine but your own mind.
+        </p>
+        <p class="kicker kicker-bold" data-reveal>Every other tool keeps a recording. Yours keeps a promise.</p>
+        <p class="proof-line" data-reveal>On-device by default. Audio never stored. Saved locally, with optional encrypted backup. HIPAA compliant. SOC 2 Type II. Never sold. Never trained on.</p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 11 — LOVED BY / PRICING
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat loved" id="loved">
+      <div class="container">
+
+        <!-- Testimonial carousel -->
+        <h2 class="h2 h2-center" data-reveal>Why everyone <em>loves us.</em></h2>
+        <div class="carousel" data-reveal>
+          <div class="carousel-track" id="carouselTrack">
+            <figure class="carousel-slide is-active">
+              <!-- PLACEHOLDER SLOT: testimonial photo — swap in Fable -->
+              <div class="avatar placeholder-avatar" data-placeholder="PHOTO · Gautam">G</div>
+              <blockquote class="serif">"Much faster than standard LLMs, which have no context about my life or meetings."</blockquote>
+              <figcaption class="mono">— Gautam, CEO, Monsoon Capital</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <!-- PLACEHOLDER SLOT: testimonial photo — swap in Fable -->
+              <div class="avatar placeholder-avatar" data-placeholder="PHOTO · Ananth">A</div>
+              <blockquote class="serif">"During a meeting, TwinMind gave me answers before I asked."</blockquote>
+              <figcaption class="mono">— Ananth, SWE at Google</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <!-- PLACEHOLDER SLOT: real testimonial + photo — swap in Fable -->
+              <div class="avatar placeholder-avatar" data-placeholder="PHOTO · testimonial 3">?</div>
+              <blockquote class="serif">"Placeholder — drop a real customer quote here in Fable."</blockquote>
+              <figcaption class="mono">— Placeholder · Name, Role, Company</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <!-- PLACEHOLDER SLOT: real testimonial + photo — swap in Fable -->
+              <div class="avatar placeholder-avatar" data-placeholder="PHOTO · testimonial 4">?</div>
+              <blockquote class="serif">"Placeholder — drop a real customer quote here in Fable."</blockquote>
+              <figcaption class="mono">— Placeholder · Name, Role, Company</figcaption>
+            </figure>
+          </div>
+          <div class="carousel-controls" role="tablist" aria-label="Testimonials">
+            <button class="carousel-dot is-active" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
+            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
+            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Testimonial 3"></button>
+            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Testimonial 4"></button>
+          </div>
+        </div>
+
+        <!-- Logo strip (text wordmarks; swap for SVG logos in Fable) -->
+        <p class="logo-strip-heading mono" data-reveal>Augmenting 400,000+ minds at</p>
+        <div class="logo-strip" data-reveal>
+          <!-- PLACEHOLDER SLOT: company logo SVGs — swap in Fable -->
+          <span>Genentech</span><span>Microsoft</span><span>J.P. Morgan</span><span>NVIDIA</span><span>University of Michigan</span><span>Meta</span>
+        </div>
+
+        <!-- Pricing -->
+        <p class="pricing-kicker serif" data-reveal>Evolution never picked favorites — so it starts free, forever.</p>
+        <div class="pricing" data-reveal>
+          <div class="price-card">
+            <p class="price-name mono">Free</p>
+            <p class="price-amount serif">$0</p>
+            <ul class="price-list">
+              <li>Unlimited transcription</li>
+              <li>Summaries &amp; AI chats</li>
+              <li>Daily digests &amp; recaps</li>
+              <li>Save unlimited audio</li>
+            </ul>
+            <a class="btn btn-ghost" href="#closer">Evolve faster</a>
+          </div>
+          <div class="price-card price-card-featured">
+            <p class="price-name mono">Pro</p>
+            <p class="price-amount serif">$11.99<span class="price-per mono">/mo</span></p>
+            <ul class="price-list">
+              <li>Everything in Free, plus</li>
+              <li>Speaker ID</li>
+              <li>ChatGPT / Gemini / Claude, latest models</li>
+              <li>Phone-call recording</li>
+              <li>Audio uploads</li>
+            </ul>
+            <a class="btn btn-primary" href="#closer">Evolve faster</a>
+          </div>
+          <div class="price-card">
+            <p class="price-name mono">Max</p>
+            <p class="price-amount serif">$23.99<span class="price-per mono">/mo</span></p>
+            <ul class="price-list">
+              <li>Everything in Pro, plus</li>
+              <li>10× limits</li>
+              <li>The Email Assistant</li>
+              <li>World's best transcription in 140+ languages</li>
+              <li>Unlimited frontier models</li>
+              <li>Priority access</li>
+            </ul>
+            <a class="btn btn-ghost" href="#closer">Evolve faster</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BEAT 12 — CLOSER + FOOTER  (full dawn — the sun has risen)
+         Dark-on-light: by here the sky is fully gold.
+         ════════════════════════════════════════════════════════════ -->
+    <section class="beat closer" id="closer">
+      <div class="container closer-inner">
+        <h2 class="display closer-h2" data-reveal>Your mind is the strongest <em>machine on earth.</em></h2>
+        <p class="closer-sub serif" data-reveal>Give it the time to grow.</p>
+        <div data-reveal>
+          <a class="btn btn-dawn" href="https://twinmind.com" rel="noopener">Evolve faster</a>
+        </div>
+        <p class="availability mono" data-reveal>soon on iPhone, Android, Mac &amp; Chrome</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-eyebrow mono" data-reveal>Never replace. Only empower.</p>
+    <!-- Giant wordmark on the sunrise gradient -->
+    <div class="footer-wordmark" aria-hidden="true">TWINMIND</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
